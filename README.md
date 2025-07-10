@@ -27,7 +27,9 @@ $ npm install asar-node
 ```
 
 ```js
-require('asar-node').register()
+require('asar-node').register({
+  archives: ['**/*.asar']
+})
 // Equivalent to require('asar-node/lib/register.js').register()
 
 require('./path/to/any-node-project') // like require a nodejs directory
@@ -43,11 +45,13 @@ To let node find modules from `node_modules.asar`, You should
 
 ``` js
 const { register, addAsarToLookupPaths } = require('asar-node')
-// Equivalent to 
+// Equivalent to
 // const register = require('asar-node/lib/register.js').register
 // const addAsarToLookupPaths = require('asar-node/lib/lookup.js').addAsarToLookupPaths
 
-register()
+register({
+  archives: ['**/*.asar']
+})
 addAsarToLookupPaths()
 
 const Koa = require('koa') // koa is in node_modules.asar
@@ -95,7 +99,7 @@ require('asar-node/lib/autorun/index')
   $ asar-node [...]
   ```
 
-* `node_modules/asar-node/dist/autorun.js` 
+* `node_modules/asar-node/dist/autorun.js`
 
   Preload bundle.
 
@@ -113,7 +117,7 @@ require('asar-node/lib/autorun/index')
   require('mod') // mod could be in node_modules.asar
   ```
 
-* `node_modules/asar-node/dist/autorun-register.js` 
+* `node_modules/asar-node/dist/autorun-register.js`
 
   Preload bundle without `node_modules.asar` support.
 

@@ -1,10 +1,16 @@
 {
   "name": "asar-node",
-  "version": "3.1.1",
+  "version": "@baidu/3.2.1",
   "description": "Enable require('./path/to/any-node-project.asar') & require('./path/to/any-node-project.asar/any/file'). Or just run asar-node ./path/to/any-node-project.asar",
   "bin": {
     "asar-node": "./bin/asar-node.js"
   },
+  "files": [
+    "bin",
+    "lib",
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
     "test": "asar p ./spec/_app --unpack=*.node ./spec/app.asar && asar p ./spec/_app-default-entry ./spec/app-default-entry.asar && asar p ./spec/_app-default-entry-json ./spec/app-default-entry-json.asar && asar p ./spec/_app-default-entry-node --unpack=*.node ./spec/app-default-entry-node.asar && asar p ./spec/_app-pkg-default-entry ./spec/app-pkg-default-entry.asar && asar p ./spec/_app-pkg-default-entry-json ./spec/app-pkg-default-entry-json.asar && asar p ./spec/_app-pkg-default-entry-node --unpack=*.node ./spec/app-pkg-default-entry-node.asar && asar p ./spec/_app-default-entry-error ./spec/app-default-entry-error.asar && asar p ./spec/_app-pkg-entry ./spec/app-pkg-entry.asar && asar p ./spec/_app-pkg-entry-error ./spec/app-pkg-entry-error.asar && node ./spec/subdir/index.js",
     "test2": "mocha ./spec/asar-spec.js>test.log",
@@ -25,6 +31,9 @@
   },
   "bugs": {
     "url": "https://github.com/toyobayashi/asar-node/issues"
+  },
+  "peerDependencies": {
+    "fast-glob": "*"
   },
   "devDependencies": {
     "asar": "^3.1.0",
