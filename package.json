@@ -1,6 +1,6 @@
 {
   "name": "@baidu/asar-node",
-  "version": "3.2.1",
+  "version": "3.2.3",
   "description": "Enable require('./path/to/any-node-project.asar') & require('./path/to/any-node-project.asar/any/file'). Or just run asar-node ./path/to/any-node-project.asar",
   "bin": {
     "asar-node": "./bin/asar-node.js"
@@ -24,13 +24,13 @@
   "main": "./index.js",
   "license": "MIT",
   "author": "toyobayashi",
-  "homepage": "https://github.com/toyobayashi/asar-node",
+  "homepage": "https://github.com/kekee000/asar-node/asar-node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/toyobayashi/asar-node.git"
+    "url": "https://github.com/kekee000/asar-node/asar-node.git"
   },
   "bugs": {
-    "url": "https://github.com/toyobayashi/asar-node/issues"
+    "url": "https://github.com/kekee000/asar-node/asar-node/issues"
   },
   "peerDependencies": {
     "fast-glob": "*"
